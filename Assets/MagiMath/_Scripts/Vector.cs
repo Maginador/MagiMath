@@ -28,5 +28,18 @@ namespace MaginaMath{
             var vec = new Vector(a.x - b.x, a.y - b.y, a.z - b.y);
             return vec;
         }
+
+        public static Vector Cross(Vector a, Vector b)
+        {
+            var cross = new Vector((a.y * b.z) - (a.z - b.z), (a.x * b.z) - (a.z * b.x), (a.x * b.y) - (a.y * b.x)) ;
+
+            return cross;
+        }
+
+        public static float Dot(Vector a, Vector b)
+        {
+            var dot = (a.x * b.x) + (a.y * b.y) + (a.z * b.z);
+            return dot;
+        }
     }
 }
