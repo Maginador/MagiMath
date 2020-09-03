@@ -19,13 +19,13 @@ namespace MaginaMath{
 
         public static Vector operator +(Vector a, Vector b)
         {
-            var vec = new Vector(a.x + b.x, a.y + b.y, a.z + b.y);
+            var vec = new Vector(a.x + b.x, a.y + b.y, a.z + b.z);
             return vec;
         }
 
         public static Vector operator -(Vector a, Vector b)
         {
-            var vec = new Vector(a.x - b.x, a.y - b.y, a.z - b.y);
+            var vec = new Vector(a.x - b.x, a.y - b.y, a.z - b.z);
             return vec;
         }
 
@@ -40,6 +40,11 @@ namespace MaginaMath{
         {
             var dot = (a.x * b.x) + (a.y * b.y) + (a.z * b.z);
             return dot;
+        }
+
+        public override string ToString()
+        {
+            return "Vector : (" + x + "," + y + "," + z + ")";
         }
     }
 }
